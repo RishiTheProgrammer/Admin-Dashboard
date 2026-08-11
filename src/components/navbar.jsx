@@ -10,7 +10,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 const navbar = () => {
   return (
     <>
-        <Navbar expand="lg" className="bg-body-tertiary m-2 rounded-2">
+        <Navbar expand="lg" className="bg-body-tertiary m-2 rounded-2 px-2 py-2">
           <Container fluid>
             <Navbar.Brand href="#" className='d-flex align-items-center gap-1'>
               <BsSpeedometer2 className="me-2" /> Admin Dashboard
@@ -27,7 +27,7 @@ const navbar = () => {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="mx-auto d-flex align-items-center gap-3">
+                <Nav className="mx-auto d-flex align-items-center gap-4">
                     <Link to="home">Home</Link>
                     <Link to="analytics">Analytics</Link>
                     <Link to="messages">Messages</Link>
