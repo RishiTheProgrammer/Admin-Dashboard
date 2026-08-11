@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { BsSpeedometer2 } from "react-icons/bs";
 import { TbCircleLetterRFilled } from "react-icons/tb";
-import { Link } from "react-scroll"
+import { NavLink } from "react-router-dom"
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
 const navbar = () => {
@@ -28,11 +28,11 @@ const navbar = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="mx-auto d-flex align-items-center gap-4">
-                    <Link to="home">Home</Link>
-                    <Link to="analytics">Analytics</Link>
-                    <Link to="messages">Messages</Link>
-                    <Link to="settings">Settings</Link>
-                    <Link to="profile">Profile</Link>
+                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/analytics">Analytics</NavLink>
+                    <NavLink to="/messages">Messages</NavLink>
+                    <NavLink to="/settings">Settings</NavLink>
+                    <NavLink to="/profile">Profile</NavLink>
                 </Nav>
                   <NavDropdown
                     title={<TbCircleLetterRFilled size={30}/>}
