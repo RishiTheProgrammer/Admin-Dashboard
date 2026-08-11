@@ -1,9 +1,21 @@
 import { Col } from 'react-bootstrap'
+import { Routes, Route } from 'react-router-dom'
+import Home from '../sections/Home'
+import Analytics from '../sections/Analytics'
+import Messages from '../sections/Messages'
+import Settings from '../sections/Settings'
+import Profile from '../sections/Profile'
 
 const MainArea = () => {
   return (
     <Col>
-    
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/messages" element={<Messages />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/profile" element={<Profile />} />
+        </Routes>
     </Col>
   )
 }
