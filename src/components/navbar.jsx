@@ -29,13 +29,21 @@ const navbar = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="mx-auto d-flex align-items-center gap-4">
-                    <NavLink to="/" className={({isActive}) => {
-                      isActive ? "active-link" : ""
+                    <NavLink to="/" end className={({isActive}) => {
+                      isActive ? "nav-link active-link" : "nav-link"
                     }}>Home</NavLink>
-                    <NavLink to="/analytics">Analytics</NavLink>
-                    <NavLink to="/messages">Messages</NavLink>
-                    <NavLink to="/settings">Settings</NavLink>
-                    <NavLink to="/profile">Profile</NavLink>
+                    <NavLink to="/analytics" className={({isActive}) => {
+                      isActive ? "nav-link active-link" : "nav-link"
+                    }}>Analytics</NavLink>
+                    <NavLink to="/messages" className={({isActive}) => {
+                      isActive ? "nav-link active-link" : "nav-link"
+                    }}>Messages</NavLink>
+                    <NavLink to="/settings" className={({isActive}) => {
+                      isActive ? "nav-link active-link" : "nav-link"
+                    }}>Settings</NavLink>
+                    <NavLink to="/profile" className={({isActive}) => {
+                      isActive ? "nav-link active-link" : "nav-link"
+                    }}>Profile</NavLink>
                 </Nav>
                   <NavDropdown
                     title={<TbCircleLetterRFilled size={30}/>}
