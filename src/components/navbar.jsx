@@ -4,7 +4,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { BsSpeedometer2 } from "react-icons/bs";
 import { TbCircleLetterRFilled } from "react-icons/tb";
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import './navbar.css'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
 const navbar = () => {
@@ -28,7 +29,9 @@ const navbar = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="mx-auto d-flex align-items-center gap-4">
-                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/" className={({isActive}) => {
+                      isActive ? "active-link" : ""
+                    }}>Home</NavLink>
                     <NavLink to="/analytics">Analytics</NavLink>
                     <NavLink to="/messages">Messages</NavLink>
                     <NavLink to="/settings">Settings</NavLink>
