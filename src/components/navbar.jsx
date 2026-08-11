@@ -9,6 +9,7 @@ import './navbar.css'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
 const navbar = () => {
+  const navClass = ({ isActive }) => (isActive ? 'nav-link active-link' : 'nav-link');
   return (
     <>
         <Navbar expand="lg" className="bg-body-tertiary m-2 rounded-2 px-2 py-2">
@@ -29,21 +30,11 @@ const navbar = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="mx-auto d-flex align-items-center gap-4">
-                    <NavLink to="/" end className={({isActive}) => {
-                      isActive ? "nav-link active-link" : "nav-link"
-                    }}>Home</NavLink>
-                    <NavLink to="/analytics" className={({isActive}) => {
-                      isActive ? "nav-link active-link" : "nav-link"
-                    }}>Analytics</NavLink>
-                    <NavLink to="/messages" className={({isActive}) => {
-                      isActive ? "nav-link active-link" : "nav-link"
-                    }}>Messages</NavLink>
-                    <NavLink to="/settings" className={({isActive}) => {
-                      isActive ? "nav-link active-link" : "nav-link"
-                    }}>Settings</NavLink>
-                    <NavLink to="/profile" className={({isActive}) => {
-                      isActive ? "nav-link active-link" : "nav-link"
-                    }}>Profile</NavLink>
+                    <NavLink to="/" end className={navClass}>Home</NavLink>
+                    <NavLink to="/analytics" className={navClass}>Analytics</NavLink>
+                    <NavLink to="/messages" className={navClass}>Messages</NavLink>
+                    <NavLink to="/settings" className={navClass}>Settings</NavLink>
+                    <NavLink to="/profile" className={navClass}>Profile</NavLink>
                 </Nav>
                   <NavDropdown
                     title={<TbCircleLetterRFilled size={30}/>}
