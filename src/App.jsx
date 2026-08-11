@@ -1,7 +1,7 @@
 import { Container, Row } from 'react-bootstrap'
 import Sidebar from './components/Sidebar'
 import MainArea from './components/MainArea'
-import Navbar from './components/Navbar'
+import Navbar from './components/navbar'
 const App = () => {
   return (
     <>
