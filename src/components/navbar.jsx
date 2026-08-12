@@ -21,7 +21,7 @@ const navbar = ({theme, setTheme}) => {
   }
   return (
     <>
-        <Navbar expand="lg" className="bg-body-tertiary m-2 rounded-2 px-2 py-2" fixed="top">
+        <Navbar expand="lg" className="bg-body-tertiary m-2 rounded-2 px-2 py-2 navbar" fixed="top">
           <Container fluid>
             <Navbar.Brand href="#" className='d-flex align-items-center gap-1'>
               <BsSpeedometer2 className="me-2" /> Admin Dashboard
