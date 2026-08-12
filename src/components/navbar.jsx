@@ -8,8 +8,16 @@ import { NavLink } from "react-router-dom";
 import './navbar.css'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-const navbar = () => {
+const navbar = ({theme, setTheme}) => {
   const navClass = ({ isActive }) => (isActive ? 'nav-link active-link' : 'nav-link');
+  const user = {
+    name: "Rishi",
+    role: "Admin",
+    icon: <TbCircleLetterRFilled size={30} />
+  };
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  }
   return (
     <>
         <Navbar expand="lg" className="bg-body-tertiary m-2 rounded-2 px-2 py-2">
@@ -29,27 +37,29 @@ const navbar = () => {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="mx-auto d-flex align-items-center gap-4">
+                <Nav className="mx-lg-auto d-lg-flex align-items-center gap-4">
                     <NavLink to="/" end className={navClass}>Home</NavLink>
                     <NavLink to="/analytics" className={navClass}>Analytics</NavLink>
                     <NavLink to="/messages" className={navClass}>Messages</NavLink>
                     <NavLink to="/settings" className={navClass}>Settings</NavLink>
                     <NavLink to="/profile" className={navClass}>Profile</NavLink>
                 </Nav>
-                  <NavDropdown
-                    title={<TbCircleLetterRFilled size={30}/>}
-                    id={`offcanvasNavbarDropdown-expand-lg`}
-                  >
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                      Something else here
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  
+                  <NavDropdown title={user.icon} id="basic-nav-dropdown" className="me-5">
+              
+              <NavDropdown.Item href="#action/3.2">
+                Profile
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+                Settings
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={toggleTheme}>
+                {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>
