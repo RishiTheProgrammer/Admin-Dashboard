@@ -8,7 +8,7 @@ import Profile from '../sections/Profile'
 
 const MainArea = () => {
   return (
-    <Col>
+    <Col className='overflow-y-auto flex-grow-1' style={{marginTop: "90px"}}>
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/analytics" element={<Analytics />} />
