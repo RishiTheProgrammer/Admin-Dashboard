@@ -1,9 +1,10 @@
 import { Col } from 'react-bootstrap'
 
-const sidebar = () => {
+const sidebar = ({children, title}) => {
   return (
     <Col lg="auto">
-
+      <h2>{title}</h2>
+      {children}
     </Col>
   )
 }
