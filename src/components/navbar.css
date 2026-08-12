@@ -1,9 +1,22 @@
+.navbar{
+    backdrop-filter: blur(12px);
+}
+
 .nav-link{
     border-radius: 14px;
     transition: all 0.3s ease-in-out;
     padding: 12px 12px;
-    color: #94a3b8 !important;
+    font-weight: 500;
+    color: #959595 !important;
 }
+
+[data-bs-theme="light"] .nav-link{
+    color: #495057 !important;
+}
+
+/* [data-bs-theme="light"] .nav-link:hover{
+    background-color: rgba(0, 0, 0, 0.05) !important;
+} */
 
 .nav-link:hover{
     background-color: rgba(225, 225, 225, 0.8) !important;
