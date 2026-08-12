@@ -11,7 +11,7 @@ const App = () => {
   }, [theme]);
 
   return (
-    <div>
+    <div className='vh-100 d-flex flex-column'>
       <Navbar theme={theme} setTheme={setTheme} />
     <Container fluid>
       <Row>
