@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { BsSpeedometer2 } from "react-icons/bs";
 import { TbCircleLetterRFilled } from "react-icons/tb";
+import { FaBell } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import './navbar.css'
 import Offcanvas from 'react-bootstrap/Offcanvas';
@@ -44,7 +45,7 @@ const navbar = ({theme, setTheme}) => {
                     <NavLink to="/settings" className={navClass}>Settings</NavLink>
                     <NavLink to="/profile" className={navClass}>Profile</NavLink>
                 </Nav>
-                  <NavDropdown title={user.icon} id="basic-nav-dropdown" className="me-5">
+                  <NavDropdown title={user.icon} id="basic-nav-dropdown" className="me-3">
               
               <NavDropdown.Item href="#action/3.2">
                 Profile
@@ -53,13 +54,14 @@ const navbar = ({theme, setTheme}) => {
                 Settings
               </NavDropdown.Item>
               <NavDropdown.Item onClick={toggleTheme}>
-                {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+                Theme: {theme === 'dark' ? 'Dark' : 'Light'}
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
+            <NavLink to="/messages" className='nav-link'><FaBell size={30}/></NavLink>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>
