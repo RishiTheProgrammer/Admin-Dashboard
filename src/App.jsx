@@ -4,10 +4,14 @@ import Sidebar from './components/sidebar'
 import MainArea from './components/mainArea'
 import Navbar from './components/navbar'
 const App = () => {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState(() => {
+    localStorage.getItem("theme") || "dark"
+  });
 
   useEffect(() => {
     document.body.setAttribute('data-bs-theme', theme);
+
+    localStorage.setItem('theme', theme);
   }, [theme]);
 
   return (
