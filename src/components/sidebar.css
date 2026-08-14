@@ -1,0 +1,18 @@
+.sidebar{
+    background-color: rgba(225, 255, 255, .05) !important;
+    backdrop-filter: blur(15px);
+    position: relative;
+    padding: 1rem;
+}
+
+.sidebar::before{
+    content: '';
+    width: 100px;
+    height: 150px;
+    background-color: #0d6efd;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(80px);
+    opacity: .15;
+}
