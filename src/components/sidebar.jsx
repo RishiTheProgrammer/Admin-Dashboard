@@ -1,12 +1,12 @@
 import { Col } from 'react-bootstrap'
+import './sidebar.css'
 
-const sidebar = ({children, title}) => {
+const Sidebar = ({children}) => {
   return (
-    <Col lg="auto">
-      <h2>{title}</h2>
+    <Col lg="auto" className='rounded-2 border border-2 d-none d-lg-block sidebar'>
       {children}
     </Col>
   )
 }
 
-export default sidebar
+export default Sidebar
