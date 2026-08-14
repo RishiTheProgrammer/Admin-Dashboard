@@ -7,6 +7,7 @@
     transition: all 0.3s ease-in-out;
     padding: 12px 12px;
     font-weight: 500;
+    position: relative;
     color: #959595 !important;
 }
 
@@ -30,4 +31,16 @@
     /* backdrop-filter: blur(10px); */
     box-shadow: 0 8px 20px rgba(13, 110, 253, 0.25) !important;
     color: #fff !important;
+}
+
+.nav-link.nav-link.active-link::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -10px;
+    right: 0%;
+    background: #0d6efd;
+    box-shadow: 0 -10px 20px #0d6efd;
+    border-radius: 50px;
 }
