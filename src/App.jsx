@@ -1,27 +1,15 @@
-import { useState, useEffect } from 'react'
-import { Container, Row } from 'react-bootstrap'
-import MainArea from './components/mainArea'
-import Navbar from './components/navbar'
+import LandingPage from './pages/LandingPage';
+import DashboardLayout from './layout/DashboardLayout'
+import { Routes, Route } from 'react-router-dom'
+
 const App = () => {
-  const [theme, setTheme] = useState(() => {
-    return localStorage.getItem("theme") || "dark"
-  });
-
-  useEffect(() => {
-    document.body.setAttribute('data-bs-theme', theme);
-
-    localStorage.setItem('theme', theme);
-  }, [theme]);
+  
 
   return (
-    <div className='vh-100 d-flex flex-column'>
-      <Navbar theme={theme} setTheme={setTheme} />
-    <Container fluid>
-      <Row>
-        <MainArea />
-      </Row>
-    </Container>
-    </div>
+    <Routes>
+      <Route path="/" element={<LandingPage />}/>
+      <Route path="/*" element={<DashboardLayout />}/>
+    </Routes>
   )
 }
 
