@@ -20,7 +20,7 @@ const navbar = ({theme, setTheme}) => {
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   }
-  const navigate = useNavigate();
+  const navigate = useNavigate;
   const handleLogin = () => {
     const confirm = window.confirm("Are you sure you want to log out?");
 
