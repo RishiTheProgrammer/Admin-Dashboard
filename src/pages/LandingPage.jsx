@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import './landingPage.css'
 import { Container, Row, Col, Card } from 'react-bootstrap'
+import { FaArrowRight } from "react-icons/fa6";
 
 const LandingPage = () => {
   return (
@@ -10,9 +11,10 @@ const LandingPage = () => {
           <Card className='bg-transparent border-0 text-white ps-5'>
             <Card.Body>
               <Card.Title>
-                <h1 className='display-3 fw-semibold'>Build. Manage. <br /> Scale. Effortlessly.</h1>
+                <h1 className='display-4 fw-semibold'>Build. Manage. <br /> Scale. Effortlessly.</h1>
               </Card.Title>
-              <Card.Text className='fw-semibold fs-5'>DevDash is a modern dashboard template for developers and teams. Save time, ship faster and focus on what matters most.</Card.Text>
+              <Card.Text className='text-secondary fw-semibold fs-5'>DevDash is a modern dashboard template for developers and teams. Save time, ship faster and focus on what matters most.</Card.Text>
+              <NavLink to="/home" className='btn px-4 py-3 btn-get-started'>Get Started <FaArrowRight className='btn-arrow'/></NavLink>
             </Card.Body>
           </Card>
         </Col>
