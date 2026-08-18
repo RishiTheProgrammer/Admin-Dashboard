@@ -1,6 +1,7 @@
 import LandingPage from './pages/LandingPage';
 import DashboardLayout from './layout/DashboardLayout'
 import { Routes, Route } from 'react-router-dom'
+import './App.css'
 
 const App = () => {
   
