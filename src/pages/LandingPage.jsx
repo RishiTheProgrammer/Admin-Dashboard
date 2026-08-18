@@ -7,8 +7,8 @@ const LandingPage = () => {
   return (
     <Container fluid id='landingPage'>
       <Row className='min-vh-100 align-items-center'>
-        <Col className='ps-5'>
-          <Card className='bg-transparent border-0 text-white ps-5'>
+        <Col className='ps-lg-5' xs={12} lg={6}>
+          <Card className='bg-transparent border-0 text-white ps-lg-5 text-center text-lg-start'>
             <Card.Body>
               <Card.Title>
                 <h1 className='display-4 fw-semibold'>Build. Manage. <br /> Scale. Effortlessly.</h1>
@@ -18,12 +18,8 @@ const LandingPage = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col className='pe-5'>
-          <Card className='pe-5 bg-transparent border-0'>
-            <Card.Body>
-
-            </Card.Body>
-          </Card>
+        <Col className='pe-lg-5 text-center' xs={12} lg={6}>
+            <img src="https://picsum.photos/400" className="rounded-5 hero-img img-fluid"/>
         </Col>
       </Row>
     </Container>
