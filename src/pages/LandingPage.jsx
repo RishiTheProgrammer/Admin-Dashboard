@@ -2,13 +2,14 @@ import { NavLink } from "react-router-dom";
 import './landingPage.css'
 import { Container, Row, Col, Card } from 'react-bootstrap'
 import { FaArrowRight } from "react-icons/fa6";
+import heroImg from '../assets/HeroImg.png'
 
 const LandingPage = () => {
   return (
     <Container fluid id='landingPage'>
       <Row className='min-vh-100 align-items-center'>
-        <Col className='ps-lg-5' xs={12} lg={6}>
-          <Card className='bg-transparent border-0 text-white ps-lg-5 text-center text-lg-start'>
+        <Col className='ps-xl-5' xs={12} lg={6}>
+          <Card className='bg-transparent border-0 text-white ps-xl-5 text-center text-lg-start'>
             <Card.Body>
               <Card.Title>
                 <h1 className='display-4 fw-semibold'>Build. Manage. <br /> Scale. Effortlessly.</h1>
@@ -18,8 +19,8 @@ const LandingPage = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col className='pe-lg-5 text-center' xs={12} lg={6}>
-            <img src="https://picsum.photos/400" className="rounded-5 hero-img img-fluid"/>
+        <Col className='pe-xl-5 text-center' xs={12} lg={6}>
+            <img src={heroImg} className="rounded-5 hero-img img-fluid"/>
         </Col>
       </Row>
     </Container>
