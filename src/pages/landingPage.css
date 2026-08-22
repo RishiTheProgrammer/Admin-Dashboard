@@ -40,3 +40,9 @@
 .hero-img{
     mix-blend-mode: lighten;
 }
+
+.hero-vector{
+    width: 100%;
+    display: block;
+    height: auto;
+}
