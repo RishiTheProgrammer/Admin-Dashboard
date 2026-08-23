@@ -5,6 +5,7 @@ import { FaPlus } from "react-icons/fa";
 import Badge from 'react-bootstrap/Badge';
 import Form from 'react-bootstrap/Form'
 import Sidebar from '../components/sidebar'
+import ProjectCard from '../components/ProjectCard';
 const Home = () => {
   const tasks = [
     {
@@ -24,7 +25,6 @@ const Home = () => {
     }   
   ]
   const number = tasks.length
-  console.log(number)
   const [time, setTime] = useState(new Date())
   useEffect(() => {
     const timer = setInterval(() => {
@@ -33,7 +33,27 @@ const Home = () => {
 
     return () => 
       clearInterval(timer)
-  }, [])
+  }, []);
+  const projects = [
+    {
+      id: 1,
+      title: "Active Projects",
+      number: 12,
+      chartData: [20, 30, 40, 50, 60]
+    },
+    {
+      id: 2,
+      title: "Revenue Q2",
+      number: "$74.5K",
+      chartData: [30, 40, 45, 50, 60]
+    },
+    {
+      id: 3,
+      title: "Team Productivity",
+      number: "94%",
+      chartData: [20, 30, 40, 50, 70]
+    }
+  ]
   return (
     <Container fluid>
       <Row className='gap-3'>
@@ -72,8 +92,15 @@ const Home = () => {
           }
           </div>
         </Sidebar>
-        <Col className='rounded-2 border border-secondary'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quos, optio soluta repellendus porro praesentium at, nulla suscipit et nesciunt error quasi, incidunt sunt quis vitae tempora. Necessitatibus, earum minus?
+        <Col className='rounded-2 bg-body-tertiary'>
+          <Row className='justify-content-evenly mt-3 px-3'>
+            <h2>Projects Overview</h2>
+            {projects.map((project) => (
+              <Col key={project.id} className="mt-3 mt-lg-0 rounded border-3">
+                <ProjectCard title={project.title} number={project.number}/>
+              </Col>
+            ))}
+          </Row>
         </Col>
       </Row>
     </Container>
