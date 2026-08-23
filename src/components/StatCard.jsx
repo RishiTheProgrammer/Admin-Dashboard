@@ -1,8 +1,9 @@
 import { Card } from 'react-bootstrap'
+import './statCard.css'
 
 const StatCard = ({icon, title, description, CardBodyClass}) => {
   return (
-    <Card className="bg-transparent p-3 rounded-3 border-3 border-secondary text-white">
+    <Card className="bg-transparent p-3 rounded-3 border-3 border-secondary text-white card">
         <Card.Body className={CardBodyClass}>
             {icon}
             <Card.Title className="fs-3">{title}</Card.Title>
