@@ -2,7 +2,6 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { TbHexagonLetterRFilled } from "react-icons/tb";
 import { TbCircleLetterRFilled } from "react-icons/tb";
 import { FaBell } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
@@ -34,7 +33,7 @@ const navbar = ({theme, setTheme}) => {
         <Navbar expand="lg" className="bg-body-tertiary m-2 rounded-2 px-2 py-2 navbar" fixed="top">
           <Container fluid>
             <Navbar.Brand href="https://rishitheprogrammer.vercel.app" className='d-flex align-items-center gap-1'>
-              <TbHexagonLetterRFilled size={30} className='me-2'/> Rishi
+              DevDash
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="offcanvasNavbar-expand-lg" />
             <Navbar.Offcanvas
@@ -56,12 +55,12 @@ const navbar = ({theme, setTheme}) => {
                     <NavLink to="/profile" className={navClass}>Profile</NavLink>
                 </Nav>
                   <div className="d-flex gap-2 mx-auto m-lg-0 w-auto">
-                    <NavDropdown title={user.icon} id="basic-nav-dropdown" className={`account`}>
+                    <NavDropdown title={user.icon} id="basic-nav-dropdown">
                       <NavDropdown.Item>
-                        <NavLink to="/profile" className='text-secondary text-decoration'>Profile</NavLink>
+                        <NavLink to="/profile">Profile</NavLink>
                       </NavDropdown.Item>
                       <NavDropdown.Item>
-                        <NavLink to="/settings" className='text-secondary text-decoration'>Settings</NavLink>
+                        <NavLink to="/settings">Settings</NavLink>
                       </NavDropdown.Item>
                       <NavDropdown.Item onClick={toggleTheme}>
                         Theme: {theme === 'dark' ? 'Dark' : 'Light'}
