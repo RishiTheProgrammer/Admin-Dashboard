@@ -39,19 +39,22 @@ const Home = () => {
       id: 1,
       title: "Active Projects",
       number: 12,
-      chartData: [20, 30, 40, 50, 60]
+      chartType: "line",
+      chartData: [4, 6, 5, 7, 6, 8]
     },
     {
       id: 2,
       title: "Revenue Q2",
       number: "$74.5K",
-      chartData: [30, 40, 45, 50, 60]
+      chartType: "bar",
+      chartData: [15,22, 14, 28, 19, 32]
     },
     {
       id: 3,
       title: "Team Productivity",
       number: "94%",
-      chartData: [20, 30, 40, 50, 70]
+      chartType: "doughnut",
+      chartData: [94, 6]
     }
   ]
   return (
@@ -96,8 +99,8 @@ const Home = () => {
           <Row className='justify-content-evenly mt-3 px-3'>
             <h2>Projects Overview</h2>
             {projects.map((project) => (
-              <Col key={project.id} className="mt-3 mt-lg-0 rounded border-3">
-                <ProjectCard title={project.title} number={project.number}/>
+              <Col key={project.id} className="mt-3 mt-lg-0 rounded border-3" xs={12} md={6} lg={4}>
+                <ProjectCard title={project.title} number={project.number} chartData={project.chartData} chartType={project.chartType}/>
               </Col>
             ))}
           </Row>
