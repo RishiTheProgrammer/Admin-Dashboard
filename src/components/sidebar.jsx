@@ -3,7 +3,7 @@ import './sidebar.css'
 
 const Sidebar = ({children}) => {
   return (
-    <Col lg="auto" className='rounded-2 border border-2 d-none d-lg-block sidebar'>
+    <Col lg="auto" className='rounded-2 d-none d-lg-block sidebar'>
       {children}
     </Col>
   )
