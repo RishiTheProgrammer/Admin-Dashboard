@@ -1,8 +1,8 @@
-.card{
+.custom-card{
     transition: .3s all ease-in-out;
 }
 
-.card:hover{
+.custom-card:hover{
     transform: translateY(-10px);
     border-color: white !important;
 }
