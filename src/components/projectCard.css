@@ -1,0 +1,18 @@
+.custom-project-card{
+    border: none;
+    background-color: rgba(225, 225, 225, .05);
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+}
+
+.up-card .custom-project-card::before{
+    position: absolute;
+    background-color: rgba(225, 225, 225, 1);
+    content: '';
+    width: 150px;
+    height: 150px;
+    border-top-left-radius: 50%;
+    filter: blur(50px);
+    opacity: 15%;
+}
