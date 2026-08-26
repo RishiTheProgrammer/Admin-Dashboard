@@ -95,14 +95,18 @@ const Home = () => {
           }
           </div>
         </Sidebar>
-        <Col className='rounded-2 bg-body-tertiary'>
-          <Row className='justify-content-evenly mt-3 px-3'>
+        <Col>
+          <Row className='justify-content-evenly mt-3 px-lg-3'>
             <h2>Projects Overview</h2>
             {projects.map((project) => (
-              <Col key={project.id} className="mt-3 mt-lg-0 rounded border-3" xs={12} md={6} lg={4}>
+              <Col key={project.id} className={`mt-3 mt-lg-0 rounded border-3 ${project.id % 2 === 0 ? "up-card" : "down-card"}`} xs={12} md={6} lg={4}>
                 <ProjectCard title={project.title} number={project.number} chartData={project.chartData} chartType={project.chartType}/>
               </Col>
             ))}
+          </Row>
+
+          <Row className='justify-content-evenly mt-3 px-lg-3'>
+
           </Row>
         </Col>
       </Row>
