@@ -1,4 +1,5 @@
 import { Card } from 'react-bootstrap'
+import './projectCard.css'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -72,11 +73,11 @@ const ProjectCard = ({title, number, chartData, chartType}) => {
     chart = <Bar data={data} options={options}/>
   }
   return (
-    <Card className='w-auto'>
+    <Card className='custom-project-card'>
         <Card.Body>
             <Card.Text>{title}</Card.Text>
             <Card.Title>{number}</Card.Title>
-              <div style={{height: "180px", position: "relative", width: "100%"}}>
+              <div style={{height: "140px", position: "relative", width: "100%"}}>
                 {chart}
               </div>
         </Card.Body>
